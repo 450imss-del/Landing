@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Digital | Landing Pages para PYMES</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    color:#1a1a1a;
+}
+header{
+    background:#0B1F3A;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+header h1{
+    font-size:32px;
+    margin-bottom:15px;
+}
+header p{
+    font-size:18px;
+    max-width:600px;
+    margin:auto;
+}
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#1E90FF;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+section{
+    padding:50px 20px;
+    max-width:900px;
+    margin:auto;
+}
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+.card{
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+form{
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+input, select{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+}
+button{
+    width:100%;
+    padding:12px;
+    background:#0B1F3A;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+footer{
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+    background:#eaeaea;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Convertimos tráfico en clientes reales</h1>
+<p>En Vector Digital ayudamos a pymes en México a aumentar sus conversiones mediante landing pages estratégicas.</p>
+<a href="#formulario" class="btn">Solicitar diagnóstico gratuito</a>
+</header>
+
+<section>
+<h2>¿Tu empresa enfrenta estos problemas?</h2>
+
+<div class="card">Inviertes en publicidad y no ves resultados claros.</div>
+<div class="card">Recibes mensajes sin intención real de compra.</div>
+<div class="card">No sabes cuántos clics realmente se convierten.</div>
+
+</section>
+
+<section>
+<h2>Nuestra Solución</h2>
+
+<div class="card">Landing pages diseñadas estratégicamente para conversión.</div>
+<div class="card">Optimización para campañas en Facebook e Instagram.</div>
+<div class="card">Formulario que filtra prospectos reales.</div>
+<div class="card">Métricas claras para medir resultados.</div>
+
+</section>
+
+<section id="formulario">
+<h2>Solicita tu diagnóstico gratuito</h2>
+
+<form onsubmit="enviarWhatsApp(event)">
+<input type="text" id="nombre" placeholder="Nombre" required>
+<input type="text" id="empresa" placeholder="Empresa" required>
+<input type="text" id="whatsapp" placeholder="WhatsApp" required>
+<select id="inversion">
+<option value="">¿Actualmente inviertes en publicidad?</option>
+<option value="Si">Sí</option>
+<option value="No">No</option>
+</select>
+<button type="submit">Enviar solicitud</button>
+</form>
+
+</section>
+
+<footer>
+© 2026 Vector Digital | Especialistas en conversión para PYMES
+</footer>
+
+<script>
+function enviarWhatsApp(e){
+e.preventDefault();
+
+let nombre = document.getElementById("nombre").value;
+let empresa = document.getElementById("empresa").value;
+let whatsapp = document.getElementById("whatsapp").value;
+let inversion = document.getElementById("inversion").value;
+
+let mensaje = `Hola, soy ${nombre} de la empresa ${empresa}. Mi WhatsApp es ${whatsapp}. Actualmente invierto en publicidad: ${inversion}. Quiero mi diagnóstico gratuito.`;
+
+let url = "https://wa.me/521TU_NUMERO_AQUI?text=" + encodeURIComponent(mensaje);
+
+window.open(url, "_blank");
+}
+</script>
+
+</body>
+  </html>
